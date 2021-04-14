@@ -4743,6 +4743,7 @@ private void MnPeriksaLabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-
         Valid.tabelKosong(tabModeAkunPiutang);
         DTPTgl.setDate(new Date());
         BtnNota.setEnabled(akses.getbilling_ralan());
+        BtnNota.setEnabled(akses.getinacbg_klaim_baru_otomatis());
         BtnSimpan.setEnabled(akses.getbilling_ralan());
         BtnView.setEnabled(akses.getbilling_ralan());
         MnRawatJalan.setEnabled(akses.gettindakan_ralan());

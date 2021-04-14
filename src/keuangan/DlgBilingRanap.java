@@ -5224,6 +5224,7 @@ private void BtnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
         DTPTgl.setDate(new Date());
         BtnSimpan.setEnabled(akses.getbilling_ranap());
         BtnNota.setEnabled(akses.getbilling_ranap());
+        BtnNota.setEnabled(akses.getinacbg_klaim_baru_otomatis());
         BtnView.setEnabled(akses.getbilling_ranap());
         MnRawatJalan.setEnabled(akses.gettindakan_ralan());
         MnRawatInap.setEnabled(akses.gettindakan_ranap());

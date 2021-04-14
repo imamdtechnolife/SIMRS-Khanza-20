@@ -3961,7 +3961,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("umur",rs.getString("umur"));
                         param.put("lahir",rs.getString("lahir"));//ada
                         param.put("pengirim",Sequel.cariIsi("select nm_dokter from dokter where kd_dokter=?",rs.getString("dokter_perujuk")));//ada
-                        param.put("tanggal",rs.getString("tgl_periksa"));
+                        param.put("tanggalperiksa",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));//ada
                         param.put("petugas",rs.getString("nama"));//ada
                         param.put("jam",rs.getString("jam"));//ada
@@ -4179,6 +4179,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                             namakamar=Sequel.cariIsi("select nm_poli from poliklinik inner join reg_periksa on poliklinik.kd_poli=reg_periksa.kd_poli "+
                                     "where reg_periksa.no_rawat='"+rs.getString("no_rawat")+"'");
                         }
+                       
                         Map<String, Object> param = new HashMap<>();
                         param.put("noperiksa",rs.getString("no_rawat"));//ada
                         param.put("norm",rs.getString("no_rkm_medis"));//ada
@@ -4187,10 +4188,10 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("umur",rs.getString("umur"));
                         param.put("lahir",rs.getString("lahir"));//ada
                         param.put("pengirim",Sequel.cariIsi("select nm_dokter from dokter where kd_dokter=?",rs.getString("dokter_perujuk")));//ada
-                        param.put("tanggal",rs.getString("tgl_periksa"));
+                        param.put("tanggalhasil",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));//ada
                         param.put("petugas",rs.getString("nama"));//ada
-                        param.put("jam",rs.getString("jam"));//ada
+                        param.put("jamhasil",rs.getString("jam"));//ada
                         param.put("alamat",rs.getString("alamat"));//ada
                         param.put("kamar",kamar);//ada
                         param.put("namakamar",namakamar);//ada

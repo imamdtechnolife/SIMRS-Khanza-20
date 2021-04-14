@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.13.0.final using JasperReports Library version 6.13.0-46ada4d1be8f3c5985fd0b6146f3ed44caed6f05  -->
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rptSuratBebasCovid" language="javascript" pageWidth="421" pageHeight="595" whenNoDataType="AllSectionsNoDetail" columnWidth="381" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a44ed28c-d4c7-4134-83ee-884570a676c4">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="96"/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="localhost sik"/>
 	<property name="com.jaspersoft.studio.report.description" value=""/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="simrs"/>
 	<parameter name="hari" class="java.lang.String"/>
 	<parameter name="TanggalAwal" class="java.lang.String"/>
 	<parameter name="TanggalAkhir" class="java.lang.String"/>
@@ -22,7 +22,7 @@
 	<parameter name="tb" class="java.lang.String"/>
 	<parameter name="norawat" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[select reg_periksa.no_rawat, DATE_FORMAT(periksa_lab.tgl_periksa, '%d-%m-%Y') as tgl_periksa , template_laboratorium.Pemeriksaan, detail_periksa_lab.nilai, detail_periksa_lab.nilai_rujukan, dokter.nm_dokter,pasien.jk, pasien.nm_pasien,pasien.no_ktp,pasien.jk,pasien.umur,pasien.pekerjaan,concat(pasien.alamat,', ',kelurahan.nm_kel,', ',kecamatan.nm_kec,', ',kabupaten.nm_kab) as alamat, concat(pasien.tmp_lahir,', ',DATE_FORMAT(pasien.tgl_lahir, '%d-%m-%Y')) as ttl, DATE_FORMAT(periksa_lab.tgl_periksa + INTERVAL 7 day,'%d-%m-%Y') as expired from reg_periksa inner join pasien inner join dokter INNER JOIN periksa_lab inner join detail_periksa_lab inner join template_laboratorium inner join jns_perawatan_lab inner join kelurahan inner join kecamatan inner join kabupaten on reg_periksa.no_rkm_medis=pasien.no_rkm_medis and periksa_lab.kd_dokter=dokter.kd_dokter and detail_periksa_lab.no_rawat=reg_periksa.no_rawat and template_laboratorium.id_template=detail_periksa_lab.id_template and pasien.kd_kel=kelurahan.kd_kel and pasien.kd_kec=kecamatan.kd_kec and pasien.kd_kab=kabupaten.kd_kab where template_laboratorium.id_template='522' and reg_periksa.no_rawat=$P{norawat} and detail_periksa_lab.nilai='posiif' or detail_periksa_lab.nilai='negatif' limit 1]]>
+		<![CDATA[select reg_periksa.no_rawat, DATE_FORMAT(detail_periksa_lab.tgl_periksa, '%d-%m-%Y') as tgl_periksa , template_laboratorium.Pemeriksaan, detail_periksa_lab.nilai, detail_periksa_lab.nilai_rujukan, dokter.nm_dokter,pasien.jk, pasien.nm_pasien,pasien.no_ktp,pasien.jk,pasien.umur,pasien.pekerjaan,concat(pasien.alamat,', ',kelurahan.nm_kel,', ',kecamatan.nm_kec,', ',kabupaten.nm_kab) as alamat, concat(pasien.tmp_lahir,', ',DATE_FORMAT(pasien.tgl_lahir, '%d-%m-%Y')) as ttl, DATE_FORMAT(CURRENT_DATE + INTERVAL 14 day,'%d-%m-%Y') as expired from reg_periksa inner join pasien inner join dokter INNER JOIN periksa_lab inner join detail_periksa_lab inner join template_laboratorium inner join jns_perawatan_lab inner join kelurahan inner join kecamatan inner join kabupaten on reg_periksa.no_rkm_medis=pasien.no_rkm_medis and periksa_lab.kd_dokter=dokter.kd_dokter and detail_periksa_lab.no_rawat=reg_periksa.no_rawat and template_laboratorium.id_template=detail_periksa_lab.id_template and pasien.kd_kel=kelurahan.kd_kel and pasien.kd_kec=kecamatan.kd_kec  and pasien.kd_kab=kabupaten.kd_kab where detail_periksa_lab.kd_jenis_prw='JB00215' and reg_periksa.no_rawat=$P{norawat} LIMIT 1]]>
 	</queryString>
 	<field name="no_rawat" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="no_rawat"/>
@@ -178,7 +178,7 @@
 					<font fontName="Tahoma" size="9" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{nm_pasien}.toUpperCase() ]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{nm_pasien}.toUpperCase()]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="5" y="298" width="135" height="12" uuid="307a2f61-a429-4c4d-824a-1311d1024e8e">
@@ -207,7 +207,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="148" y="298" width="230" height="12" uuid="3d60bd21-cb16-4bfd-8a57-becf134c6fc1">
+				<reportElement x="148" y="294" width="230" height="32" uuid="3d60bd21-cb16-4bfd-8a57-becf134c6fc1">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -542,7 +542,7 @@
 				<textElement>
 					<font fontName="Tahoma" size="9" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{nilai}.toUpperCase().equals("POSITIF")?"POSITIVE":"NEGATIVE"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{nilai}.toUpperCase().equals("POSITIF")?"POSITIVE":$F{nilai}.toUpperCase().equals("NEGATIF")?"NEGATIVE":" "]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="148" y="458" width="210" height="12" uuid="964bd911-0cd1-4aa4-b99c-2c4ed3a0c94a">

@@ -108,6 +108,7 @@ public class DlgPasien extends javax.swing.JDialog {
     private LocalDate birthday;
     private Period p;
     private StringBuilder htmlContent;
+    private String norm;
 
     /** Creates new form DlgPas
      * @param parent
@@ -4747,9 +4748,24 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                 }
             }
             
-              
+//            if(Kd2.getText().equals("")){
+//            if(ChkRM.isSelected()==true){
+            String hjgj=""; 
+            try{
+                ps = koneksi.prepareStatement("select norm from set_rm_offline order by norm");
+                rs=ps.executeQuery();
+                while(rs.next()){
+                    hjgj=rs.getString(1);
+                }        
+            }catch(Exception e){
+            }
+            
+//            String nomorRmOffline = Sequel.cariIsi("select norm from set_rm_offline order by norm");
+            int nomorRmofflineConv = (int) Integer.parseInt(hjgj) + 1;
+            String norm2 = (String) String.valueOf(nomorRmofflineConv);
+            String norm = "0"+norm2;
             if(Sequel.menyimpantf2("pasien","?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?","No.Rekam Medis Pasien",38,new String[]{
-                    TNo.getText(),TNm.getText(),TKtp.getText(),CmbJk.getSelectedItem().toString().substring(0,1),TTmp.getText(),
+                    norm,TNm.getText(),TKtp.getText(),CmbJk.getSelectedItem().toString().substring(0,1),TTmp.getText(),
                     Valid.SetTgl(DTPLahir.getSelectedItem()+""),NmIbu.getText(),
                     Alamat.getText().replaceAll("ALAMAT",""),CMbGd.getSelectedItem().toString(),Pekerjaan.getText(),CmbStts.getSelectedItem().toString(),CmbAgama.getSelectedItem().toString(),
                     DTPDaftar.getSelectedItem().toString().substring(6,10)+"-"+DTPDaftar.getSelectedItem().toString().substring(3,5)+"-"+DTPDaftar.getSelectedItem().toString().substring(0,2),
@@ -4775,12 +4791,13 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                 if(ChkRM.isSelected()==true){
                     Sequel.queryu2("delete from set_no_rkm_medis");
                     Sequel.queryu2("insert into set_no_rkm_medis values(?)",1,new String[]{TNo.getText()});            
-                }                
+                }
+                editRMOffline();
                 emptTeks(); 
             }else{
-                autoNomor();
+                autoNomorRm();
                 if(Sequel.menyimpantf2("pasien","?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?","No.Rekam Medis Pasien",38,new String[]{
-                        TNo.getText(),TNm.getText(),TKtp.getText(),CmbJk.getSelectedItem().toString().substring(0,1),TTmp.getText(),
+                        norm,TNm.getText(),TKtp.getText(),CmbJk.getSelectedItem().toString().substring(0,1),TTmp.getText(),
                         Valid.SetTgl(DTPLahir.getSelectedItem()+""),NmIbu.getText(),
                         Alamat.getText().replaceAll("ALAMAT",""),CMbGd.getSelectedItem().toString(),Pekerjaan.getText(),CmbStts.getSelectedItem().toString(),CmbAgama.getSelectedItem().toString(),
                         DTPDaftar.getSelectedItem().toString().substring(6,10)+"-"+DTPDaftar.getSelectedItem().toString().substring(3,5)+"-"+DTPDaftar.getSelectedItem().toString().substring(0,2),
@@ -4806,12 +4823,13 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                     if(ChkRM.isSelected()==true){
                         Sequel.queryu2("delete from set_no_rkm_medis");
                         Sequel.queryu2("insert into set_no_rkm_medis values(?)",1,new String[]{TNo.getText()});            
-                    }                
+                    }
+                    editRMOffline();
                     emptTeks(); 
                 }else{
-                    autoNomor();
+                    autoNomorRm();
                     if(Sequel.menyimpantf2("pasien","?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?","No.Rekam Medis Pasien",38,new String[]{
-                            TNo.getText(),TNm.getText(),TKtp.getText(),CmbJk.getSelectedItem().toString().substring(0,1),TTmp.getText(),
+                            norm,TNm.getText(),TKtp.getText(),CmbJk.getSelectedItem().toString().substring(0,1),TTmp.getText(),
                             Valid.SetTgl(DTPLahir.getSelectedItem()+""),NmIbu.getText(),
                             Alamat.getText().replaceAll("ALAMAT",""),CMbGd.getSelectedItem().toString(),Pekerjaan.getText(),CmbStts.getSelectedItem().toString(),CmbAgama.getSelectedItem().toString(),
                             DTPDaftar.getSelectedItem().toString().substring(6,10)+"-"+DTPDaftar.getSelectedItem().toString().substring(3,5)+"-"+DTPDaftar.getSelectedItem().toString().substring(0,2),
@@ -4837,12 +4855,13 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                         if(ChkRM.isSelected()==true){
                             Sequel.queryu2("delete from set_no_rkm_medis");
                             Sequel.queryu2("insert into set_no_rkm_medis values(?)",1,new String[]{TNo.getText()});            
-                        }                
+                        }
+                        editRMOffline();
                         emptTeks(); 
                     }else{
-                        autoNomor();
+                        autoNomorRm();
                         if(Sequel.menyimpantf2("pasien","?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?","No.Rekam Medis Pasien",38,new String[]{
-                                TNo.getText(),TNm.getText(),TKtp.getText(),CmbJk.getSelectedItem().toString().substring(0,1),TTmp.getText(),
+                                norm,TNm.getText(),TKtp.getText(),CmbJk.getSelectedItem().toString().substring(0,1),TTmp.getText(),
                                 Valid.SetTgl(DTPLahir.getSelectedItem()+""),NmIbu.getText(),
                                 Alamat.getText().replaceAll("ALAMAT",""),CMbGd.getSelectedItem().toString(),Pekerjaan.getText(),CmbStts.getSelectedItem().toString(),CmbAgama.getSelectedItem().toString(),
                                 DTPDaftar.getSelectedItem().toString().substring(6,10)+"-"+DTPDaftar.getSelectedItem().toString().substring(3,5)+"-"+DTPDaftar.getSelectedItem().toString().substring(0,2),
@@ -4868,12 +4887,13 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                             if(ChkRM.isSelected()==true){
                                 Sequel.queryu2("delete from set_no_rkm_medis");
                                 Sequel.queryu2("insert into set_no_rkm_medis values(?)",1,new String[]{TNo.getText()});            
-                            }                
+                            }
+                            editRMOffline();
                             emptTeks(); 
                         }else{
-                            autoNomor();
+                            autoNomorRm();
                             if(Sequel.menyimpantf("pasien","?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?","No.Rekam Medis Pasien",38,new String[]{
-                                    TNo.getText(),TNm.getText(),TKtp.getText(),CmbJk.getSelectedItem().toString().substring(0,1),TTmp.getText(),
+                                    norm,TNm.getText(),TKtp.getText(),CmbJk.getSelectedItem().toString().substring(0,1),TTmp.getText(),
                                     Valid.SetTgl(DTPLahir.getSelectedItem()+""),NmIbu.getText(),
                                     Alamat.getText().replaceAll("ALAMAT",""),CMbGd.getSelectedItem().toString(),Pekerjaan.getText(),CmbStts.getSelectedItem().toString(),CmbAgama.getSelectedItem().toString(),
                                     DTPDaftar.getSelectedItem().toString().substring(6,10)+"-"+DTPDaftar.getSelectedItem().toString().substring(3,5)+"-"+DTPDaftar.getSelectedItem().toString().substring(0,2),
@@ -4899,11 +4919,12 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                                 if(ChkRM.isSelected()==true){
                                     Sequel.queryu2("delete from set_no_rkm_medis");
                                     Sequel.queryu2("insert into set_no_rkm_medis values(?)",1,new String[]{TNo.getText()});            
-                                }                
-                                emptTeks(); 
+                                }
+                                editRMOffline();
+                                emptTeks();
                             }else{
                                 TNm.requestFocus();
-                                autoNomor();
+                                autoNomorRm();
                             }
                         }
                     }
@@ -9467,8 +9488,10 @@ private void KabupatenMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:eve
         BtnJabatanTNI.setEnabled(false);
         BtnPangkatTNI.setEnabled(false);
         PanelAccor.setVisible(false);
+        ChkRM.setSelected(false);
         
-        autoNomor();
+//        autoNomor();
+        autoNomorRm();
         TNm.requestFocus();
     }
 
@@ -9864,7 +9887,7 @@ private void KabupatenMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:eve
     }
 
     private void prosesCari2() {
-        switch (TabRawat.getSelectedIndex()) {
+        switch (TabRawat.getSelectedIndex()){
             case 1:
                 for(z=0;z<tbPasien.getRowCount();z++){ 
                     tbPasien.setValueAt(Sequel.cariIsi("select count(reg_periksa.no_rkm_medis) from reg_periksa where reg_periksa.no_rkm_medis=?",tbPasien.getValueAt(z,1).toString())+" X",z,21);
@@ -9955,6 +9978,26 @@ private void KabupatenMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:eve
         }
     }
     
+    private void autoNomorRm() {
+        
+        try{
+            ps =  koneksi.prepareStatement("select norm from set_rm_offline order by norm");
+            rs = ps.executeQuery();
+            while(rs.next()){
+                int normconv =  (int) Integer.parseInt(rs.getString(1)) + 1;
+                String norm = (String) String.valueOf(normconv);
+                String norm3 = "0"+norm;
+                TNo.setText(norm3);                
+            }
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(this, "Terjadi kesalahan method autoNomorRm pada DlgPasien : "+e.getMessage());
+        }
+        
+        
+    }
+    
     public void setPasien(String NamaPasien,String Kontak,String Alamat,
             String TempatLahir,String TglLahir,String JK,String NoKartuJKN,String NIK){
         this.TNm.setText(NamaPasien);
@@ -9985,6 +10028,19 @@ private void KabupatenMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:eve
             FormPhotoPass.setVisible(false);
             ChkAccor.setVisible(true);
         }
+    }
+    
+    private void editRMOffline() {
+        String norm="";
+        try{
+        ps =  koneksi.prepareStatement("select norm from set_rm_offline order by norm");
+            rs = ps.executeQuery();
+            while(rs.next()){
+                int normconv =  (int) Integer.parseInt(rs.getString(1)) + 1;
+                norm = (String) String.valueOf(normconv); 
+            }
+        }catch(Exception e){}
+        Sequel.menyimpan("set_rm_offline", norm);  
     }
 
     private void panggilPhoto() {

@@ -396,21 +396,21 @@
 		</band>
 	</title>
 	<detail>
-		<band height="191" splitType="Immediate">
+		<band height="321" splitType="Immediate">
 			<line>
-				<reportElement stretchType="RelativeToBandHeight" x="-1" y="0" width="1" height="190" uuid="b6c720be-3e5d-493b-a57c-9145dde35ed0"/>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="320" uuid="b6c720be-3e5d-493b-a57c-9145dde35ed0"/>
 				<graphicElement>
 					<pen lineWidth="0.5"/>
 				</graphicElement>
 			</line>
 			<line>
-				<reportElement stretchType="RelativeToBandHeight" x="521" y="0" width="1" height="190" uuid="e378e0e4-7f4e-4728-bdb0-95dded788e36"/>
+				<reportElement stretchType="RelativeToBandHeight" x="521" y="0" width="1" height="321" uuid="e378e0e4-7f4e-4728-bdb0-95dded788e36"/>
 				<graphicElement>
 					<pen lineWidth="0.5"/>
 				</graphicElement>
 			</line>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToBandHeight" x="3" y="2" width="516" height="188" uuid="785c3198-0841-452c-abd5-422b7b3efe68"/>
+				<reportElement stretchType="RelativeToBandHeight" x="3" y="2" width="516" height="318" uuid="785c3198-0841-452c-abd5-422b7b3efe68"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Tahoma" size="10"/>
 					<paragraph lineSpacing="Single"/>
@@ -436,7 +436,7 @@
 					<font fontName="Tahoma" size="10" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[Penanggung Jawab]]></text>
+				<text><![CDATA[Dokter Radiologi]]></text>
 			</staticText>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
 				<reportElement stretchType="RelativeToBandHeight" x="325" y="88" width="194" height="15" uuid="60d6f791-8989-45fd-b930-f501609070cc"/>

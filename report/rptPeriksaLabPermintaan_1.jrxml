@@ -289,7 +289,7 @@
 					<font fontName="Tahoma" isItalic="true"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[Tanggal Permintaan]]></text>
+				<text><![CDATA[Tanggal Periksa]]></text>
 			</staticText>
 			<textField>
 				<reportElement mode="Opaque" x="143" y="116" width="387" height="13" uuid="80f3a80c-4c1b-4eed-a74b-3ba382621e0e">
@@ -589,7 +589,7 @@
 				<textElement>
 					<font fontName="Tahoma"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{tanggalpermintaan}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{tanggal}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="450" y="100" width="75" height="13" uuid="f9934d05-6c75-4261-ab46-0f7d88ddeeee">
@@ -601,7 +601,7 @@
 				<textElement>
 					<font fontName="Tahoma"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{jampermintaan}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{jam}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>

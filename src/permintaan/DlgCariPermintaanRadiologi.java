@@ -1428,6 +1428,9 @@ private void tbRadiologiRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRS
                     Map<String, Object> param = new HashMap<>();
                     param.put("noperiksa",tbRadiologiRalan.getValueAt(tbRadiologiRalan.getSelectedRow(),0).toString());
                     norm=Sequel.cariIsi("select no_rkm_medis from reg_periksa where no_rawat=? ",tbRadiologiRalan.getValueAt(tbRadiologiRalan.getSelectedRow(),1).toString());
+                    String statusBayar=Sequel.cariIsi("select kd_pj from reg_periksa where no_rawat=? ",tbRadiologiRalan.getValueAt(tbRadiologiRalan.getSelectedRow(),1).toString());
+                    String penjab = Sequel.cariIsi("select png_jawab from penjab where kd_pj=? ",statusBayar);
+                    param.put("penjab", penjab);
                     param.put("norm",norm);
                     param.put("pekerjaan",Sequel.cariIsi("select pekerjaan from pasien where no_rkm_medis=?",norm));
                     param.put("noktp",Sequel.cariIsi("select no_ktp from pasien where no_rkm_medis=?",norm));
@@ -1503,6 +1506,11 @@ private void tbRadiologiRalanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRS
                     Map<String, Object> param = new HashMap<>();
                     param.put("noperiksa",tbRadiologiRanap.getValueAt(tbRadiologiRanap.getSelectedRow(),0).toString());
                     norm=Sequel.cariIsi("select no_rkm_medis from reg_periksa where no_rawat=? ",tbRadiologiRanap.getValueAt(tbRadiologiRanap.getSelectedRow(),1).toString());
+                    String statusBayar=Sequel.cariIsi("select kd_pj from reg_periksa where no_rawat=? ",tbRadiologiRalan.getValueAt(tbRadiologiRalan.getSelectedRow(),1).toString());
+                    String penjab = Sequel.cariIsi("select png_jawab from penjab where kd_pj=? ",statusBayar);
+                    System.out.println(statusBayar);
+                    System.out.println(penjab);
+                    param.put("penjab", penjab);
                     param.put("norm",norm);
                     param.put("pekerjaan",Sequel.cariIsi("select pekerjaan from pasien where no_rkm_medis=?",norm));
                     param.put("noktp",Sequel.cariIsi("select no_ktp from pasien where no_rkm_medis=?",norm));
