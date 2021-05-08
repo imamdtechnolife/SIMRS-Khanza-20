@@ -3783,8 +3783,6 @@ public final class RMPenilaianAwalKeperawatanKebidanan extends javax.swing.JDial
             Valid.textKosong(KeluhanUtama,"Keluhan Utama");
         }else if(TotalHasil.getText().trim().equals("")){
             Valid.textKosong(TotalHasil,"Total Hasil");
-        }else if(Lokasi.getText().trim().equals("")){
-            Valid.textKosong(Lokasi,"Lokasi");
         }else if(Masalah.getText().trim().equals("")){
             Valid.textKosong(Masalah,"Masalah Kebidanan");
         }else if(Tindakan.getText().trim().equals("")){
@@ -3882,8 +3880,6 @@ public final class RMPenilaianAwalKeperawatanKebidanan extends javax.swing.JDial
             Valid.textKosong(KeluhanUtama,"Keluhan Utama");
         }else if(TotalHasil.getText().trim().equals("")){
             Valid.textKosong(TotalHasil,"Total Hasil");
-        }else if(Lokasi.getText().trim().equals("")){
-            Valid.textKosong(Lokasi,"Lokasi");
         }else if(Masalah.getText().trim().equals("")){
             Valid.textKosong(Masalah,"Masalah Kebidanan");
         }else if(Tindakan.getText().trim().equals("")){
@@ -4780,7 +4776,7 @@ public final class RMPenilaianAwalKeperawatanKebidanan extends javax.swing.JDial
     }//GEN-LAST:event_PemeriksaanPanggulKeyPressed
 
     private void KeluhanUtamaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KeluhanUtamaKeyPressed
-        Valid.pindah(evt,PemeriksaanPanggul,Umur);
+        Valid.pindah2(evt,PemeriksaanPanggul,Umur);
     }//GEN-LAST:event_KeluhanUtamaKeyPressed
 
     private void UmurKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UmurKeyPressed
@@ -5199,11 +5195,11 @@ public final class RMPenilaianAwalKeperawatanKebidanan extends javax.swing.JDial
     }//GEN-LAST:event_KetDokterKeyPressed
 
     private void TindakanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TindakanKeyPressed
-        Valid.pindah(evt,Masalah,BtnSimpan);
+        Valid.pindah2(evt,Masalah,BtnSimpan);
     }//GEN-LAST:event_TindakanKeyPressed
 
     private void MasalahKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MasalahKeyPressed
-        Valid.pindah(evt,KetDokter,Tindakan);
+        Valid.pindah2(evt,KetDokter,Tindakan);
     }//GEN-LAST:event_MasalahKeyPressed
 
     /**
