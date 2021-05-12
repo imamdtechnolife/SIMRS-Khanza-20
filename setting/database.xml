@@ -21,6 +21,9 @@
     <entry key="ANTRIAN">player</entry>
     <entry key="ALARMAPOTEK">yes</entry>
     <entry key="FORMALARMAPOTEK">ralan + ranap</entry>
+    <entry key="STOKKOSONGRESEP">no</entry>
+    <entry key="HPPFARMASI">dasar</entry>
+    <entry key="HPPTOKO">dasar</entry>
     <entry key="ALARMLAB">yes</entry>
     <entry key="FORMALARMLAB">ralan + ranap</entry>
     <entry key="ALARMRADIOLOGI">yes</entry>
@@ -28,6 +31,7 @@
     <entry key="ALARMRSISRUTE">yes</entry>
     <entry key="ALARMBOOKINGPERIKSA">yes</entry>
     <entry key="ALARMPENGADUANPASIEN">yes</entry>
+    <entry key="ALARMPERMINTAANRANAP">yes</entry>
     <entry key="MENUTRANSPARAN">yes</entry>
     <entry key="URLAPIBPJS">https://new-api.bpjs-kesehatan.go.id:8080/new-vclaim-rest</entry>
     <entry key="SECRETKEYAPIBPJS">l4nh5eVYrLAER/I2A4b3Tw==</entry>
@@ -51,10 +55,10 @@
     <entry key="URLAPISITT">http://sirs.kemkes.go.id/sirsservice/sitb/sitb/senddata</entry>
     <entry key="IDSITT">l4nh5eVYrLAER/I2A4b3Tw==</entry>
     <entry key="PASSSITT">l4nh5eVYrLAER/I2A4b3Tw==</entry>
+    <entry key="KABUPATENSITT">12345</entry>
     <entry key="URLAPICORONA">http://sirs.kemkes.go.id/fo/index.php</entry>
     <entry key="IDCORONA">MtZdW7Ie/BPx4+edU7E0+Q==</entry>
     <entry key="PASSCORONA">wesRGhsjqnfiOoXWuqoTjw==</entry>
-    <entry key="KABUPATENSITT">12345</entry>
     <entry key="KAMARAKTIFRANAP"></entry>
     <entry key="DOKTERAKTIFKASIRRALAN"></entry>
     <entry key="POLIAKTIFKASIRRALAN"></entry>
