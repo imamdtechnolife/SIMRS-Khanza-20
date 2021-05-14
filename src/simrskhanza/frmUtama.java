@@ -17073,6 +17073,10 @@ private void MnGantiPasswordBtnLogActionPerformed(java.awt.event.ActionEvent evt
         this.setCursor(Cursor.getDefaultCursor());
     }
     
+    private void btnTagihanHutangObatActionPerformed(java.awt.event.ActionEvent evt) {
+        
+    }
+    
     /**
     * @param args the command line arguments
     */
@@ -17691,7 +17695,7 @@ private void MnGantiPasswordBtnLogActionPerformed(java.awt.event.ActionEvent evt
             btnRingkasanPenerimaanNonMedis,btnRingkasanStokKeluarNonMedis,btnRingkasanReturSuplierNonMedis,btnOmsetPenerimaan,btnValidasiPenagihanPiutang,
             btnPermintaanRanap,btnBPJSReferensiDiagnosaPRB,btnBPJSReferensiObatPRB,btnBPJSSuratKontrol,btnPenggunaanBHPOK,btnSuratKeteranganRawatInap,
             btnSuratKeteranganSehat,btnPendapatanPerCaraBayar,btnAkunRekeningHtHBankJateng,btnPembayaranBankJateng,btnBPJSSuratPRI,btnRingkasanTindakanRalan,
-            btnLamaPelayananPasien,btnSuratSakitPihak2,btnReferensiPendaftaranMobileJKN,btnBatalPendaftaranMobileJKN;
+            btnLamaPelayananPasien,btnSuratSakitPihak2,btnReferensiPendaftaranMobileJKN,btnBatalPendaftaranMobileJKN,btnTagihanHutangObat;
     
     public void isWall(){
         try{
@@ -19535,6 +19539,11 @@ private void MnGantiPasswordBtnLogActionPerformed(java.awt.event.ActionEvent evt
 
             if(akses.gethutang_obat()==true){
                 Panelmenu.add(btnHutangObat);
+                jmlmenu++;
+            }
+            
+            if(akses.gettagihan_hutang_obat()==true){
+                Panelmenu.add(btnTagihanHutangObat);
                 jmlmenu++;
             }
 
@@ -23114,6 +23123,11 @@ private void MnGantiPasswordBtnLogActionPerformed(java.awt.event.ActionEvent evt
 
         if(akses.gethutang_obat()==true){
             Panelmenu.add(btnHutangObat);
+            jmlmenu++;
+        }
+        
+        if(akses.gettagihan_hutang_obat()==true){
+            Panelmenu.add(btnTagihanHutangObat);
             jmlmenu++;
         }
 
@@ -27375,6 +27389,13 @@ private void MnGantiPasswordBtnLogActionPerformed(java.awt.event.ActionEvent evt
                 Panelmenu.add(btnHutangObat);
                 jmlmenu++;
             }
+        }
+        
+        if(akses.gettagihan_hutang_obat()==true){
+            if(btnTagihanHutangObat.getText().toLowerCase().trim().contains(TCari.getText().toLowerCase().trim())){
+                Panelmenu.add(btnTagihanHutangObat);
+                jmlmenu++;
+            }                
         }
 
         if(akses.getbayar_pemesanan_obat()==true){
@@ -32015,5 +32036,13 @@ private void MnGantiPasswordBtnLogActionPerformed(java.awt.event.ActionEvent evt
         btnBatalPendaftaranMobileJKN.setName("btnBatalPendaftaranMobileJKN"); 
         btnBatalPendaftaranMobileJKN.setPreferredSize(new java.awt.Dimension(200, 90));
         btnBatalPendaftaranMobileJKN.addActionListener(this::btnBatalPendaftaranMobileJKNActionPerformed);
+        
+        btnTagihanHutangObat = new widget.ButtonBig();
+        btnTagihanHutangObat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/48x48/if_mail-send-receive_118784.png"))); 
+        btnTagihanHutangObat.setText("Titip Faktur/Tagihan Obat & BHP");
+        btnTagihanHutangObat.setIconTextGap(0);
+        btnTagihanHutangObat.setName("btnTagihanHutangObat"); 
+        btnTagihanHutangObat.setPreferredSize(new java.awt.Dimension(200, 90));
+        btnTagihanHutangObat.addActionListener(this::btnTagihanHutangObatActionPerformed);
     }
 }
