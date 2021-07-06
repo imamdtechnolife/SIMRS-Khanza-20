@@ -144,7 +144,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="146" y="178" width="180" height="21" uuid="0b0f7a59-8618-4470-b9bc-18339490e622"/>
+				<reportElement x="146" y="178" width="384" height="21" uuid="0b0f7a59-8618-4470-b9bc-18339490e622"/>
 				<textElement>
 					<font fontName="Tahoma" size="12" isBold="true"/>
 					<paragraph lineSpacing="Single"/>

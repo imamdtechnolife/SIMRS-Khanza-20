@@ -516,7 +516,7 @@ public final class DlgPermintaanLaboratorium extends javax.swing.JDialog {
         jLabel9.setBounds(0, 40, 92, 23);
 
         Tanggal.setForeground(new java.awt.Color(50, 70, 50));
-        Tanggal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "23-01-2021" }));
+        Tanggal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "27-01-2021" }));
         Tanggal.setDisplayFormat("dd-MM-yyyy");
         Tanggal.setName("Tanggal"); // NOI18N
         Tanggal.setOpaque(false);
@@ -814,7 +814,7 @@ public final class DlgPermintaanLaboratorium extends javax.swing.JDialog {
         panelGlass12.add(TNoPermintaan2);
         TNoPermintaan2.setBounds(101, 10, 130, 23);
 
-        jLabel12.setText("Diperoleh Dengan :");
+        jLabel12.setText("Teknik Sampling :");
         jLabel12.setName("jLabel12"); // NOI18N
         panelGlass12.add(jLabel12);
         jLabel12.setBounds(450, 10, 110, 23);
@@ -829,7 +829,7 @@ public final class DlgPermintaanLaboratorium extends javax.swing.JDialog {
         panelGlass12.add(DiperolehDengan);
         DiperolehDengan.setBounds(563, 10, 209, 23);
 
-        jLabel14.setText("Lokasi Pengambilan Jaringan :");
+        jLabel14.setText("Jenis Sampel :");
         jLabel14.setName("jLabel14"); // NOI18N
         panelGlass12.add(jLabel14);
         jLabel14.setBounds(0, 40, 165, 23);
@@ -844,7 +844,7 @@ public final class DlgPermintaanLaboratorium extends javax.swing.JDialog {
         panelGlass12.add(LokasiPengambilan);
         LokasiPengambilan.setBounds(168, 40, 225, 23);
 
-        jLabel16.setText("Diawetkan/Direndam Dengan :");
+        jLabel16.setText("Jenis Pengecatan :");
         jLabel16.setName("jLabel16"); // NOI18N
         panelGlass12.add(jLabel16);
         jLabel16.setBounds(400, 40, 160, 23);
@@ -859,13 +859,13 @@ public final class DlgPermintaanLaboratorium extends javax.swing.JDialog {
         panelGlass12.add(Diawetkan);
         Diawetkan.setBounds(563, 40, 209, 23);
 
-        jLabel17.setText("Pengambilan Bahan :");
+        jLabel17.setText("Tanggal Preparasi :");
         jLabel17.setName("jLabel17"); // NOI18N
         panelGlass12.add(jLabel17);
         jLabel17.setBounds(235, 10, 120, 23);
 
         TanggalPA.setForeground(new java.awt.Color(50, 70, 50));
-        TanggalPA.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "23-01-2021" }));
+        TanggalPA.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "27-01-2021" }));
         TanggalPA.setDisplayFormat("dd-MM-yyyy");
         TanggalPA.setName("TanggalPA"); // NOI18N
         TanggalPA.setOpaque(false);
@@ -908,7 +908,7 @@ public final class DlgPermintaanLaboratorium extends javax.swing.JDialog {
         DiagnosaPA.setBounds(432, 100, 340, 23);
 
         TanggalBahan.setForeground(new java.awt.Color(50, 70, 50));
-        TanggalBahan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "23-01-2021" }));
+        TanggalBahan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "27-01-2021" }));
         TanggalBahan.setDisplayFormat("dd-MM-yyyy");
         TanggalBahan.setName("TanggalBahan"); // NOI18N
         TanggalBahan.setOpaque(false);
@@ -935,7 +935,7 @@ public final class DlgPermintaanLaboratorium extends javax.swing.JDialog {
         panelGlass12.add(NomorPA);
         NomorPA.setBounds(168, 100, 130, 23);
 
-        jLabel21.setText("Nomor Slide :");
+        jLabel21.setText("Nomor :");
         jLabel21.setName("jLabel21"); // NOI18N
         panelGlass12.add(jLabel21);
         jLabel21.setBounds(25, 100, 140, 23);

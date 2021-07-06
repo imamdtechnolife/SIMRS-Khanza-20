@@ -755,6 +755,7 @@ public class DlgBilingRalan extends javax.swing.JDialog {
         TabRawat = new javax.swing.JTabbedPane();
         Scroll = new widget.ScrollPane();
         tbBilling = new widget.Table();
+        scrollPane8 = new widget.ScrollPane();
         panelBayar = new widget.panelisi();
         TtlSemua = new widget.TextBox();
         TKembali = new widget.TextBox();
@@ -803,7 +804,6 @@ public class DlgBilingRalan extends javax.swing.JDialog {
         MnInputTindakan.setForeground(new java.awt.Color(50, 50, 50));
         MnInputTindakan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         MnInputTindakan.setText("Input Tindakan Ralan");
-        MnInputTindakan.setEnabled(false);
         MnInputTindakan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         MnInputTindakan.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         MnInputTindakan.setName("MnInputTindakan"); // NOI18N
@@ -820,7 +820,6 @@ public class DlgBilingRalan extends javax.swing.JDialog {
         MnInputObat.setForeground(new java.awt.Color(50, 50, 50));
         MnInputObat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         MnInputObat.setText("Input Obat/Barang/Alkes");
-        MnInputObat.setEnabled(false);
         MnInputObat.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         MnInputObat.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         MnInputObat.setName("MnInputObat"); // NOI18N
@@ -836,8 +835,7 @@ public class DlgBilingRalan extends javax.swing.JDialog {
         MnPeriksaLab.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         MnPeriksaLab.setForeground(new java.awt.Color(50, 50, 50));
         MnPeriksaLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
-        MnPeriksaLab.setText("Input Periksa Lab");
-        MnPeriksaLab.setEnabled(false);
+        MnPeriksaLab.setText("Input Periksa Lab PK");
         MnPeriksaLab.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         MnPeriksaLab.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         MnPeriksaLab.setName("MnPeriksaLab"); // NOI18N
@@ -853,7 +851,7 @@ public class DlgBilingRalan extends javax.swing.JDialog {
         MnPeriksaLabPA.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         MnPeriksaLabPA.setForeground(new java.awt.Color(50, 50, 50));
         MnPeriksaLabPA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
-        MnPeriksaLabPA.setText("Input Periksa Lab Deskriptif");
+        MnPeriksaLabPA.setText("Input Periksa Lab PA");
         MnPeriksaLabPA.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         MnPeriksaLabPA.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         MnPeriksaLabPA.setName("MnPeriksaLabPA"); // NOI18N
@@ -870,7 +868,6 @@ public class DlgBilingRalan extends javax.swing.JDialog {
         MnPeriksaRadiologi.setForeground(new java.awt.Color(50, 50, 50));
         MnPeriksaRadiologi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         MnPeriksaRadiologi.setText("Input Periksa Radiologi");
-        MnPeriksaRadiologi.setEnabled(false);
         MnPeriksaRadiologi.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         MnPeriksaRadiologi.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         MnPeriksaRadiologi.setName("MnPeriksaRadiologi"); // NOI18N
@@ -1030,7 +1027,7 @@ public class DlgBilingRalan extends javax.swing.JDialog {
         MnCariPeriksaLab.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         MnCariPeriksaLab.setForeground(new java.awt.Color(50, 50, 50));
         MnCariPeriksaLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
-        MnCariPeriksaLab.setText("Data Pemeriksaan Lab");
+        MnCariPeriksaLab.setText("Data Pemeriksaan Lab PK");
         MnCariPeriksaLab.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         MnCariPeriksaLab.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         MnCariPeriksaLab.setName("MnCariPeriksaLab"); // NOI18N
@@ -1046,7 +1043,7 @@ public class DlgBilingRalan extends javax.swing.JDialog {
         MnCariPeriksaLabPA.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         MnCariPeriksaLabPA.setForeground(new java.awt.Color(50, 50, 50));
         MnCariPeriksaLabPA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
-        MnCariPeriksaLabPA.setText("Data Pemeriksaan Lab Deskriptif");
+        MnCariPeriksaLabPA.setText("Data Pemeriksaan Lab PA");
         MnCariPeriksaLabPA.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         MnCariPeriksaLabPA.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         MnCariPeriksaLabPA.setName("MnCariPeriksaLabPA"); // NOI18N
@@ -1718,7 +1715,7 @@ public class DlgBilingRalan extends javax.swing.JDialog {
         jLabel4.setPreferredSize(new java.awt.Dimension(65, 23));
         panelGlass1.add(jLabel4);
 
-        DTPTgl.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "30-04-2021 20:00:02" }));
+        DTPTgl.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "07-06-2021 04:12:38" }));
         DTPTgl.setDisplayFormat("dd-MM-yyyy HH:mm:ss");
         DTPTgl.setName("DTPTgl"); // NOI18N
         DTPTgl.setOpaque(false);
@@ -1765,8 +1762,13 @@ public class DlgBilingRalan extends javax.swing.JDialog {
 
         TabRawat.addTab("Data Tagihan", Scroll);
 
+        scrollPane8.setBorder(null);
+        scrollPane8.setComponentPopupMenu(PopupBayar);
+        scrollPane8.setName("scrollPane8"); // NOI18N
+        scrollPane8.setOpaque(true);
+
         panelBayar.setBorder(null);
-        panelBayar.setPreferredSize(new java.awt.Dimension(100, 137));
+        panelBayar.setPreferredSize(new java.awt.Dimension(100, 415));
         panelBayar.setLayout(null);
 
         TtlSemua.setEditable(false);
@@ -2103,7 +2105,9 @@ public class DlgBilingRalan extends javax.swing.JDialog {
         panelBayar.add(BtnAll1);
         BtnAll1.setBounds(875, 222, 25, 23);
 
-        TabRawat.addTab("Pembayaran", panelBayar);
+        scrollPane8.setViewportView(panelBayar);
+
+        TabRawat.addTab("Pembayaran", scrollPane8);
 
         panelPermintaan.setBorder(null);
         panelPermintaan.setName("panelPermintaan"); // NOI18N
@@ -3846,6 +3850,7 @@ private void MnPeriksaLabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-
     private widget.ScrollPane scrollPane5;
     private widget.ScrollPane scrollPane6;
     private widget.ScrollPane scrollPane7;
+    private widget.ScrollPane scrollPane8;
     private widget.Table tbAkunBayar;
     private widget.Table tbAkunPiutang;
     private widget.Table tbApotek;
@@ -4732,22 +4737,21 @@ private void MnPeriksaLabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-
         Valid.tabelKosong(tabModeAkunPiutang);
         DTPTgl.setDate(new Date());
         BtnNota.setEnabled(akses.getbilling_ralan());
-        BtnNota.setEnabled(akses.getinacbg_klaim_baru_otomatis());
         BtnSimpan.setEnabled(akses.getbilling_ralan());
         BtnView.setEnabled(akses.getbilling_ralan());
         MnRawatJalan.setEnabled(akses.gettindakan_ralan());
-        MnInputTindakan.setEnabled(false);
+        MnInputTindakan.setEnabled(akses.gettindakan_ralan());
         MnPemberianObat.setEnabled(akses.getberi_obat());
-        MnInputObat.setEnabled(false);
+        MnInputObat.setEnabled(akses.getberi_obat());
         MnOperasi.setEnabled(akses.getoperasi());
         MnObatLangsung.setEnabled(akses.getberi_obat());
         MnTambahan.setEnabled(akses.gettambahan_biaya());
         MnPotongan.setEnabled(akses.getpotongan_biaya());
-        MnPeriksaLab.setEnabled(false);
+        MnPeriksaLab.setEnabled(akses.getperiksa_lab());
         MnCariPeriksaLab.setEnabled(akses.getperiksa_lab());
-        MnPeriksaLabPA.setEnabled(false);
-        MnCariPeriksaLabPA.setEnabled(akses.getperiksa_lab());
-        MnPeriksaRadiologi.setEnabled(false);
+        MnPeriksaLabPA.setEnabled(akses.getpemeriksaan_lab_pa());
+        MnCariPeriksaLabPA.setEnabled(akses.getpemeriksaan_lab_pa());
+        MnPeriksaRadiologi.setEnabled(akses.getperiksa_radiologi());
         MnCariRadiologi.setEnabled(akses.getperiksa_radiologi());
         MnPenjualan.setEnabled(akses.getpenjualan_obat());        
         MnHapusTagihan.setEnabled(akses.gethapus_nota_salah());  

@@ -99,10 +99,12 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="243">
+		<band height="258">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<frame>
-				<reportElement stretchType="ContainerHeight" x="22" y="0" width="510" height="243" uuid="3ef16179-20f2-4b94-b388-fbda16e5b358"/>
+				<reportElement stretchType="ContainerHeight" x="22" y="0" width="510" height="257" uuid="3ef16179-20f2-4b94-b388-fbda16e5b358">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -215,7 +217,7 @@
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="27" y="228" width="110" height="13" forecolor="#000000" backcolor="#F0F0DC" uuid="8c40ecdf-335c-4527-bbea-a9792f10b790">
+				<reportElement mode="Transparent" x="27" y="244" width="110" height="13" forecolor="#000000" backcolor="#F0F0DC" uuid="8c40ecdf-335c-4527-bbea-a9792f10b790">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -407,7 +409,7 @@
 				<textFieldExpression><![CDATA[$P{alamat}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="143" y="228" width="175" height="13" uuid="41d51ca2-eb39-49a6-91f9-227bca123a4b">
+				<reportElement x="143" y="244" width="175" height="13" uuid="41d51ca2-eb39-49a6-91f9-227bca123a4b">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
@@ -641,6 +643,35 @@
 					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<text><![CDATA[Jam]]></text>
+			</staticText>
+			<line>
+				<reportElement x="22" y="257" width="510" height="1" uuid="8e9ef20e-c2fa-4977-96d8-d4d6cc28d3ff">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement mode="Transparent" x="137" y="242" width="4" height="13" forecolor="#000000" backcolor="#F0F0DC" uuid="d5e0af54-ea6d-4a58-b2c8-82c001909dc3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="27" y="227" width="110" height="13" forecolor="#000000" backcolor="#F0F0DC" uuid="042e0d84-f654-4c8e-b204-9845fa6ce921">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[No. KTP Pasien]]></text>
 			</staticText>
 		</band>
 	</title>
@@ -1212,6 +1243,16 @@
 					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{penjab}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" evaluationTime="Page" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="142" y="-112" width="384" height="13" uuid="62581b2b-95c2-49ee-8272-6475ae75697c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{petugas}]]></textFieldExpression>
 			</textField>
 		</band>
 	</lastPageFooter>
