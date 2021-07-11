@@ -4070,7 +4070,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                                 param.put("jampermintaan",rspermintaan.getString("jam_permintaan"));
                                 Valid.MyReport("rptPeriksaLabPermintaan1.jasper","report","::[ Pemeriksaan Laboratorium ]::",param);   
                             }else{                              
-                                Valid.MyReport("rptPeriksaLabPermintaan_1.jasper","report","::[ Pemeriksaan Laboratorium ]::",param);   
+                                Valid.MyReport("rptPeriksaLabPermintaan1.jasper","report","::[ Pemeriksaan Laboratorium ]::",param);   
                             }
                         } catch (Exception e) {
                             System.out.println("Notif : "+e);

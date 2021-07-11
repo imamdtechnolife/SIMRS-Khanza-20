@@ -60,8 +60,8 @@ public class DlgCariPermintaanLabPA extends javax.swing.JDialog {
         tabMode=new DefaultTableModel(null,new Object[]{
             "No.Permintaan","No.Rawat","Pasien","Permintaan","Jam","Sampel","Jam","Hasil","Jam",
             "Kode Dokter","Dokter Perujuk","Poli Registrasi","Informasi Tambahan","Diagnosis Klinis",
-            "Kode Bayar","Jenis Bayar","Tgl.Bahan","Diperoleh Dengan","Lokasi Jaringan","Diawetkan Dengan",
-            "Pernah Periksa di","Pada Tanggal","Nomor Slide","Dengan Hasil Pemeriksaan","Permintaan Pemeriksaan"
+            "Kode Bayar","Jenis Bayar","Tgl.Preparasi","Teknik Sampling","Jenis Sampel","Jenis Pengecatan",
+            "Pernah Periksa di","Pada Tanggal","Nomor","Dengan Hasil Pemeriksaan","Permintaan Pemeriksaan"
             }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
         };
