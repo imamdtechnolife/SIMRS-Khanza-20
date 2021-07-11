@@ -28,7 +28,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import kepegawaian.DlgCariPegawai;
 
-public class DlgPengajuanBarangMedis extends javax.swing.JDialog {
+public class InventoryPengajuanBarangMedis extends javax.swing.JDialog {
     private final DefaultTableModel tabMode;
     private sekuel Sequel=new sekuel();
     private validasi Valid=new validasi();
@@ -54,7 +54,7 @@ public class DlgPengajuanBarangMedis extends javax.swing.JDialog {
     /** Creates new form DlgProgramStudi
      * @param parent
      * @param modal */
-    public DlgPengajuanBarangMedis(java.awt.Frame parent, boolean modal) {
+    public InventoryPengajuanBarangMedis(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
 
@@ -868,7 +868,7 @@ private void btnPetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
     */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
-            DlgPengajuanBarangMedis dialog = new DlgPengajuanBarangMedis(new javax.swing.JFrame(), true);
+            InventoryPengajuanBarangMedis dialog = new InventoryPengajuanBarangMedis(new javax.swing.JFrame(), true);
             dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent e) {

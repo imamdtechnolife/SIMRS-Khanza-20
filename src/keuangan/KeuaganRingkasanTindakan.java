@@ -33,7 +33,7 @@ import simrskhanza.DlgCariCaraBayar;
  *
  * @author perpustakaan
  */
-public final class DlgRingkasanTindakan extends javax.swing.JDialog {
+public final class KeuaganRingkasanTindakan extends javax.swing.JDialog {
     private final Connection koneksi=koneksiDB.condb();
     private final sekuel Sequel=new sekuel();
     private DefaultTableModel tabModeRalanDokter,tabModeRalanParamedis,
@@ -64,7 +64,7 @@ public final class DlgRingkasanTindakan extends javax.swing.JDialog {
     /** Creates new form DlgLhtBiaya
      * @param parent
      * @param modal */
-    public DlgRingkasanTindakan(java.awt.Frame parent, boolean modal) {
+    public KeuaganRingkasanTindakan(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         this.setLocation(8,1);
@@ -2963,7 +2963,7 @@ public final class DlgRingkasanTindakan extends javax.swing.JDialog {
     */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
-            DlgRingkasanTindakan dialog = new DlgRingkasanTindakan(new javax.swing.JFrame(), true);
+            KeuaganRingkasanTindakan dialog = new KeuaganRingkasanTindakan(new javax.swing.JFrame(), true);
             dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent e) {

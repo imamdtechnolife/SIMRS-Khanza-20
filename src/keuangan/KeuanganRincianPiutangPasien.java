@@ -35,7 +35,7 @@ import simrskhanza.DlgCariCaraBayar;
  *
  * @author perpustakaan
  */
-public final class DlgRincianPiutangPasien extends javax.swing.JDialog {
+public final class KeuanganRincianPiutangPasien extends javax.swing.JDialog {
     private final DefaultTableModel tabMode;
     private Connection koneksi=koneksiDB.condb();
     private sekuel Sequel=new sekuel();
@@ -56,7 +56,7 @@ public final class DlgRincianPiutangPasien extends javax.swing.JDialog {
     /** Creates new form DlgLhtBiaya
      * @param parent
      * @param modal */
-    public DlgRincianPiutangPasien(java.awt.Frame parent, boolean modal) {
+    public KeuanganRincianPiutangPasien(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         this.setLocation(8,1);
@@ -218,7 +218,7 @@ public final class DlgRincianPiutangPasien extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Rincian Piutang Pasien Per Cara Bayar di Pendaftaran ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Rincian Piutang Pasien Per Cara Bayar di Pendaftaran ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -294,7 +294,7 @@ public final class DlgRincianPiutangPasien extends javax.swing.JDialog {
         panelGlass5.add(BtnAll);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(50,50,50));
+        jLabel10.setForeground(new java.awt.Color(50, 50, 50));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("Belum Dibayar :");
         jLabel10.setName("jLabel10"); // NOI18N
@@ -302,7 +302,7 @@ public final class DlgRincianPiutangPasien extends javax.swing.JDialog {
         panelGlass5.add(jLabel10);
 
         LCount.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        LCount.setForeground(new java.awt.Color(50,50,50));
+        LCount.setForeground(new java.awt.Color(50, 50, 50));
         LCount.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         LCount.setText("0");
         LCount.setName("LCount"); // NOI18N
@@ -856,7 +856,7 @@ private void BtnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B
     */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
-            DlgRincianPiutangPasien dialog = new DlgRincianPiutangPasien(new javax.swing.JFrame(), true);
+            KeuanganRincianPiutangPasien dialog = new KeuanganRincianPiutangPasien(new javax.swing.JFrame(), true);
             dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent e) {

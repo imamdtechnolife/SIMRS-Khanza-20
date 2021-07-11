@@ -620,7 +620,7 @@ public class koneksiDB {
     public static String TOKENINHEALTH(){
         try{
             prop.loadFromXML(new FileInputStream("setting/database.xml"));
-            var=prop.getProperty("TOKENINHEALTH");
+            var=EnkripsiAES.decrypt(prop.getProperty("TOKENINHEALTH"));
         }catch(Exception e){
             var="";
         }
@@ -834,4 +834,35 @@ public class koneksiDB {
         }
         return var;
     }
+    
+    public static String URLAPIMEDQLAB(){
+        try{
+            prop.loadFromXML(new FileInputStream("setting/database.xml"));
+            var=prop.getProperty("URLAPIMEDQLAB");
+        }catch(Exception e){
+            var=""; 
+        }
+        return var;
+    }
+    
+    public static String SECRETKEYAPIMEDQLAB(){
+        try{
+            prop.loadFromXML(new FileInputStream("setting/database.xml"));
+            var=EnkripsiAES.decrypt(prop.getProperty("SECRETKEYAPIMEDQLAB"));
+        }catch(Exception e){
+            var=""; 
+        }
+        return var;
+    }
+    
+    public static String CONSIDAPIMEDQLAB(){
+        try{
+            prop.loadFromXML(new FileInputStream("setting/database.xml"));
+            var=EnkripsiAES.decrypt(prop.getProperty("CONSIDAPIMEDQLAB"));
+        }catch(Exception e){
+            var=""; 
+        }
+        return var;
+    }
+}
 }
