@@ -865,4 +865,3 @@ public class koneksiDB {
         return var;
     }
 }
-}

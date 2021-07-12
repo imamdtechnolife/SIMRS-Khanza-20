@@ -10981,8 +10981,7 @@ private void MnLaporanRekapKunjunganBulananPoliActionPerformed(java.awt.event.Ac
         ppDeteksiDIniCorona.setEnabled(akses.getdeteksi_corona());
         MnPermintaanRanap.setEnabled(akses.getpermintaan_ranap());
         ppSuratKontrol.setEnabled(akses.getbpjs_surat_kontrol()); 
-        ppSuratPRI.setEnabled(akses.getbpjs_surat_pri());  
-        MnCetakSuratSehat2.setEnabled(akses.getsurat_keterangan_sehat());   
+        ppSuratPRI.setEnabled(akses.getbpjs_surat_pri());   
         MnCetakSuratSakitPihak2.setEnabled(akses.getsurat_sakit_pihak_2());  
         
         if(akses.getkode().equals("Admin Utama")){
