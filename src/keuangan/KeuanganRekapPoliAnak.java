@@ -39,7 +39,7 @@ import simrskhanza.DlgCariCaraBayar;
  *
  * @author maskhanza
  */
-public final class DlgRekapPoliAnak extends javax.swing.JDialog {
+public final class KeuanganRekapPoliAnak extends javax.swing.JDialog {
     private final Connection koneksi=koneksiDB.condb();
     private final sekuel Sequel=new sekuel();
     private final validasi Valid=new validasi();
@@ -57,7 +57,7 @@ public final class DlgRekapPoliAnak extends javax.swing.JDialog {
     /** Creates new form DlgLhtBiaya
      * @param parent
      * @param modal */
-    public DlgRekapPoliAnak(java.awt.Frame parent, boolean modal) {
+    public KeuanganRekapPoliAnak(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         this.setLocation(8,1);
@@ -207,7 +207,7 @@ public final class DlgRekapPoliAnak extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Rekap Poli Anak ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Rekap Poli Anak ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -578,7 +578,7 @@ public final class DlgRekapPoliAnak extends javax.swing.JDialog {
     */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
-            DlgRekapPoliAnak dialog = new DlgRekapPoliAnak(new javax.swing.JFrame(), true);
+            KeuanganRekapPoliAnak dialog = new KeuanganRekapPoliAnak(new javax.swing.JFrame(), true);
             dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent e) {

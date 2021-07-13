@@ -669,7 +669,8 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                         "permintaan_ranap,bpjs_diagnosa_prb,bpjs_obat_prb,bpjs_surat_kontrol,penggunaan_bhp_ok,surat_keterangan_rawat_inap,"+
                         "surat_keterangan_sehat,pendapatan_per_carabayar,akun_host_to_host_bank_jateng,pembayaran_bank_jateng,bpjs_surat_pri,"+
                         "ringkasan_tindakan,lama_pelayanan_pasien,surat_sakit_pihak_2,tagihan_hutang_obat,referensi_mobilejkn_bpjs,batal_pendaftaran_mobilejkn_bpjs,"+
-                        "lama_operasi,grafik_inventaris_kategori,grafik_inventaris_merk from user where id_user=AES_ENCRYPT(?,'nur')");
+                        "lama_operasi,grafik_inventaris_kategori,grafik_inventaris_merk,grafik_inventaris_produsen,pengembalian_deposit_pasien,"+
+                        "validasi_tagihan_hutang_obat from user where id_user=AES_ENCRYPT(?,'nur')");
             try {
                 ps.setString(1,user);
                 rs=ps.executeQuery();
@@ -2130,6 +2131,14 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                         tabMode.addRow(new Object[]{false,"[J]Titip Faktur/Tagihan Obat & BHP",rs.getBoolean("tagihan_hutang_obat")});
                     }
                     
+                    if("[J]Pengembalian Deposit Pasien".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[J]Pengembalian Deposit Pasien",rs.getBoolean("pengembalian_deposit_pasien")});
+                    }
+                    
+                    if("[J]Validasi Titip Faktur/Tagihan Obat & BHP".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[J]Validasi Titip Faktur/Tagihan Obat & BHP",rs.getBoolean("validasi_tagihan_hutang_obat")});
+                    }
+                    
                     if("[K]Cek NIK".toLowerCase().contains(TCari.getText().toLowerCase())){
                         tabMode.addRow(new Object[]{false,"[K]Cek NIK",rs.getBoolean("bpjs_cek_nik")});
                     }
@@ -3156,6 +3165,10 @@ public class DlgUpdateUser extends javax.swing.JDialog {
                     
                     if("[N]Jumlah Inventaris Per Merk".toLowerCase().contains(TCari.getText().toLowerCase())){
                         tabMode.addRow(new Object[]{false,"[N]Jumlah Inventaris Per Merk",rs.getBoolean("grafik_inventaris_merk")});
+                    }
+                    
+                    if("[N]Jumlah Inventaris Per Produsen".toLowerCase().contains(TCari.getText().toLowerCase())){
+                        tabMode.addRow(new Object[]{false,"[N]Jumlah Inventaris Per Produsen",rs.getBoolean("grafik_inventaris_produsen")});
                     }
                     
                     if("[O]Indeks Surat".toLowerCase().contains(TCari.getText().toLowerCase())){
@@ -5028,6 +5041,14 @@ public class DlgUpdateUser extends javax.swing.JDialog {
             if("[J]Titip Faktur/Tagihan Obat & BHP".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","tagihan_hutang_obat='"+tbUser.getValueAt(i,2).toString()+"'");
             }
+            
+            if("[J]Pengembalian Deposit Pasien".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","pengembalian_deposit_pasien='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
+            if("[J]Validasi Titip Faktur/Tagihan Obat & BHP".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","validasi_tagihan_hutang_obat='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
         }
     }
     
@@ -6059,6 +6080,10 @@ public class DlgUpdateUser extends javax.swing.JDialog {
             
             if("[N]Jumlah Inventaris Per Merk".equals(tbUser.getValueAt(i,1).toString())){
                 Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","grafik_inventaris_merk='"+tbUser.getValueAt(i,2).toString()+"'");
+            }
+            
+            if("[N]Jumlah Inventaris Per Produsen".equals(tbUser.getValueAt(i,1).toString())){
+                Sequel.mengedit("user","id_user=AES_ENCRYPT('"+TKd.getText()+"','nur')","grafik_inventaris_produsen='"+tbUser.getValueAt(i,2).toString()+"'");
             }
             
             if("[O]Indeks Surat".equals(tbUser.getValueAt(i,1).toString())){

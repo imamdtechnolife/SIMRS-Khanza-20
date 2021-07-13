@@ -16,7 +16,7 @@ import javax.swing.text.Document;
 import javax.swing.text.html.HTMLEditorKit;
 import javax.swing.text.html.StyleSheet;
 
-public class DlgSaldoAkunPerBulan extends javax.swing.JDialog {
+public class KeuanganSaldoAkunPerBulan extends javax.swing.JDialog {
     private sekuel Sequel=new sekuel();
     private validasi Valid=new validasi();
     private Jurnal jur=new Jurnal();
@@ -37,7 +37,7 @@ public class DlgSaldoAkunPerBulan extends javax.swing.JDialog {
     /** Creates new form DlgProgramStudi
      * @param parent
      * @param modal */
-    public DlgSaldoAkunPerBulan(java.awt.Frame parent, boolean modal) {
+    public KeuanganSaldoAkunPerBulan(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         HTMLEditorKit kit = new HTMLEditorKit();
@@ -90,7 +90,7 @@ public class DlgSaldoAkunPerBulan extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Saldo Akun Per Bulan ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Saldo Akun Per Bulan ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -316,7 +316,7 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
     */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(() -> {
-            DlgSaldoAkunPerBulan dialog = new DlgSaldoAkunPerBulan(new javax.swing.JFrame(), true);
+            KeuanganSaldoAkunPerBulan dialog = new KeuanganSaldoAkunPerBulan(new javax.swing.JFrame(), true);
             dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent e) {
